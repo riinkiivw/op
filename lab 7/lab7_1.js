@@ -3,19 +3,18 @@
 const array1 = [1, 2, 3, 4, 5, 6, 7];
 const array2 = ['Kyiv', 'Beijing', 'Lima', 'Amsterdam'];
 
-function removeElements(array, ...elements) {
-    elements.forEach(element => {
-        const index = array.indexOf(element);
-        if (index !== -1) {
-            array.splice(index, 1);
-        }
-    });
+function removeElement(array, item) {
+    const index = array.indexOf(item);
+    if (index !== -1) {
+        array.splice(index, 1);
+    }
     return array;
 }
 
-removeElements(array1, 5, 1, 6);
-removeElements(array2, 'Lima', 'Berlin', 'Kyiv');
+removeElement(array1, 5);
+removeElement(array2, 'Lima');
+removeElement(array2, 'Berlin');
 
-console.log(array1);
-console.log(array2);
+console.log(array1); 
+console.log(array2); 
 
